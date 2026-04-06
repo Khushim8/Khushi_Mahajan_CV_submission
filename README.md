@@ -16,6 +16,19 @@ outputs:
 - `outputs/best_model.pth` 
 - `outputs/training.log`
 
+## Structure
+
+```
+main.py         
+config.yaml     hyperparameters
+src/
+  data.py       dataset loading + augmentation
+  model.py      model definition 
+  train.py      training loop
+  evaluate.py   metrics: accuracy, confusion matrix, per-class
+  predict.py    inference -> generates predictions.csv
+```
+
 ## Results
 
 | | accuracy | F1 |
@@ -29,19 +42,6 @@ outputs:
 
 Trained for 15 epochs on CPU. full confusion matrix in `outputs/training.log`.
 ---
-
-## Structure
-
-```
-main.py         entry point
-config.yaml     hyperparameters
-src/
-  data.py       dataset loading + augmentation
-  model.py      model definition + freeze helpers
-  train.py      training loop
-  evaluate.py   metrics: accuracy, confusion matrix, per-class
-  predict.py    inference -> predictions.csv
-```
 
 ## Approach
 
