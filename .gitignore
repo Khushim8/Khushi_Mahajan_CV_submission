@@ -1,0 +1,13 @@
+
+dataset/
+
+
+outputs/best_model*.pth
+
+
+__pycache__/
+*.pyc
+venv/
+
+logs 
+outputs/training.log
