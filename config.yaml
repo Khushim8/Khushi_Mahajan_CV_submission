@@ -1,21 +1,19 @@
-# Rigetti CV Pipeline — Configuration
-# All hyperparameters and paths are centralised here so experiments
-# are fully reproducible without touching source code.
+
 
 data:
   dataset_dir: 'dataset'         # dataset path 
-  image_size: 224                 # resize target (EfficientNet canonical input)
+  image_size: 224                 
   num_workers: 0
 
 model:
-  backbone: "efficientnet_b0"     # pretrained ImageNet backbone
+  backbone: "efficientnet_b0"     # pretrained ImageNet 
   num_classes: 5
   dropout: 0.3
 
 training:
   epochs: 15
   batch_size: 32
-  learning_rate: 1.0e-3           # head-only phase
+  learning_rate: 1.0e-3           
   fine_tune_lr: 1.0e-4            # full-network fine-tune phase
   fine_tune_epoch: 8              # unfreeze backbone after this epoch
   weight_decay: 1.0e-4

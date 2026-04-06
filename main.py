@@ -1,10 +1,6 @@
 """
 main.py - trains a defect classifier on the Rigetti dataset and outputs predictions.csv
 
-usage:
-    python main.py                   # full run
-    python main.py --skip-train      # skip to eval (needs outputs/best_model.pth)
-    python main.py --config path/to/config.yaml
 """
 
 import argparse
